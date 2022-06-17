@@ -1,0 +1,51 @@
+<html>
+<head>
+<link rel="stylesheet" href="styles.css"/>
+</head>
+</html>
+<body id="body" style="background:#fff">
+<div id="config">
+    <div class="block">
+        <div>Ding on timer complete: <input type="checkbox" class="checkbox config_el" name="ding" checked="true" id="config_ding"/></div>
+        <div>Timer background color: <input type="color" class="config_el" name="bgcolor" value="#cc6633" id="config_bgcolor"/></div>
+        <div style="text-align:center; margin-top:10px"><input type="button" class="button" value="SAVE" id="save_config_button"/></div>
+    </div>
+    <hr/>
+    <div class="block">
+        <h3>Keyboard Shortcuts</h3>
+        <div>
+            <div><b>Space</b> or <b>P</b> : Pause/Resume</div>
+            <div><b>1-99</b> : Set timer for [1-99] mins (Enter to start)</div>
+            <div><b>R</b> : Restart timer</div>
+            <div><b>T</b> : Task view</div>
+            <div><b>?</b> : Toggle settings panel</div>
+        </div>
+    </div>
+</div>
+<div id="task-list" class="block">
+    <h3>Task List (<a href="#" id="close_task_list_button">close</a>)</h3>
+    <div class="task template">
+        <div class="name"></div>
+        <div class="start button">start</div>
+        <div class="remove button">remove</div>
+    </div>
+    <div>
+        <form id="add_task_form">
+            <input type="text" name="new_task" value="" placeholder="mins - name (i.e. 20 - draft blog post)" style="width:80%"/> <input type="submit" value="add"/>
+        </form>
+    </div>
+    <div id="tasks"></div>
+</div>
+<div id="timer">
+    <div id="fill"></div>
+    <div id="input-minutes" class="center"></div>
+    <div id="paused-message" class="center">PAUSED</div>
+    <div class="center timer-value-container">
+        <span id="timer-value" style="color:#000">---</span>
+    </div>
+</div>
+
+<script src="main.js"></script>
+
+</body>
+</html>
